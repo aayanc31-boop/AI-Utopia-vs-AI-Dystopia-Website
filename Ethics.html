@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="System.html">Utopia</a></li>
+      <li><a href="City.html">Dystopia</a></li>
+      <li><a href="Choices.html">Choices</a></li>
+      <li><a href="Ethics.html">Ethics</a></li>
+    </ul>
+  </nav>
+
+  <body>
+
+    <h1 class="site-title">Ethics</h1>
+    <div class="quotes-container">
+        <div class="quote" style="top: 20%; left: 15%;">"Who decides what’s right?"</div>
+        <div class="quote" style="top: 30%; left: 50%;">"Ethics or efficiency?"</div>
+        <div class="quote" style="top: 65%; left: 30%;">"Can machines have morals?"</div>
+        <div class="quote" style="top: 80%; left: 70%;">"Where’s the line?"</div>
+    </div>
+
+    <main class="content">
+        <section class="ethics-types">
+            <h2>Types of AI Ethics</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Algorithmic Bias</h3>
+                    <p>Addressing bias in AI algorithms to ensure fair and equitable outcomes.</p>
+                </div>
+                <div class="card">
+                    <h3>Data Privacy</h3>
+                    <p>Protecting sensitive user data and ensuring responsible data handling practices.</p>
+                </div>
+                <div class="card">
+                    <h3>Transparency & Explainability</h3>
+                    <p>Making AI decision-making processes transparent and understandable.</p>
+                </div>
+                <div class="card">
+                    <h3>AI Safety</h3>
+                    <p>Developing AI systems that are safe, reliable, and aligned with human values.</p>
+                </div>
+            </div>
+        </section>
+<section class="comparison-section">
+  <h2>AI Utopia vs AI Dystopia: Ethical Comparison</h2>
+  <p class="intro">
+    A look at how AI could shape different areas of life, for better or worse.
+  </p>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>AI Utopia 🌟</th>
+        <th>AI Dystopia 🌪️</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Healthcare</td>
+        <td>Personalized medicine, early diagnosis, AI-assisted surgeries</td>
+        <td>Misdiagnosis, data privacy violations, unequal access to AI healthcare</td>
+      </tr>
+      <tr>
+        <td>Education</td>
+        <td>Adaptive learning, global access to quality education</td>
+        <td>Surveillance in classrooms, algorithmic bias in grading</td>
+      </tr>
+      <tr>
+        <td>Transportation</td>
+        <td>Safer roads with autonomous vehicles, reduced emissions</td>
+        <td>Job loss (drivers), accidents due to AI errors, hacking risks</td>
+      </tr>
+      <tr>
+        <td>Sustainability & Energy</td>
+        <td>Optimized energy use, AI-driven climate solutions</td>
+        <td>High energy consumption by AI systems, greenwashing</td>
+      </tr>
+      <tr>
+        <td>Homes & Daily Life</td>
+        <td>Smart homes that improve comfort, safety, and energy efficiency</td>
+        <td>Over-dependence on AI, loss of privacy, manipulation through smart devices</td>
+      </tr>
+      <tr>
+        <td>Surveillance & Social Control</td>
+        <td>Crime prevention, disaster response, public safety</td>
+        <td>Mass surveillance, predictive policing, loss of freedom and autonomy</td>
+      </tr>
+      <tr>
+        <td>Human Well-being</td>
+        <td>Enhanced mental health, reduced stress, better life balance</td>
+        <td>Isolation, manipulation, emotional dependency on AI systems</td>
+      </tr>
+      <tr>
+        <td>Autonomy</td>
+        <td>Empowered decision-making, AI as a supportive tool</td>
+        <td>Loss of control, decisions made by opaque algorithms</td>
+      </tr>
+      <tr>
+        <td>Work & Creativity</td>
+        <td>AI handles repetitive tasks, humans focus on innovation and purpose</td>
+        <td>Job displacement, creative stagnation, economic inequality</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+        <section class="quotes">
+            <h2>Famous Quotes on AI Ethics</h2>
+            <div class="quotes-carousel">
+                <div class="quote-item active">
+                    <p>"The development of full artificial intelligence could spell the end of the human race." - Stephen Hawking</p>
+                </div>
+                <div class="quote-item">
+                    <p>"AI is likely to be either the best or worst thing to happen to humanity." - Stephen Hawking</p>
+                </div>
+                <div class="quote-item">
+                    <p>"As machines get smarter, people may end up being less relevant." - Elon Musk</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflection">
+            <h2>Reflection</h2>
+            <p>Would you trust an AI to make life-changing decisions for you? Why or why not?</p>
+            <textarea id="reflection-text" rows="4" cols="50"></textarea>
+            <button id="submit-reflection">Submit</button>
+            <p id="submission-message" class="hidden">Thank you for your reflection!</p>
+        </section>
+    </main>
+
+    <style>
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.comparison-section {
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 1500px;
+  text-align: center;
+  color: #fff;
+}
+
+.comparison-section h2 {
+  font-family: "Orbitron", monospace;
+  font-size: 2.5rem;
+  color: #00d4ff;
+  margin-bottom: 15px;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+/* Table Styling */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0,212,255,0.3);
+}
+
+.comparison-table th {
+  background: linear-gradient(135deg, #00d4ff, #0d71fc);
+  color: #fff;
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.comparison-table td {
+  background: rgba(0,0,0,0.75);
+  padding: 18px;
+  border: 1px solid #00d4ff;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table tr:hover td {
+  background: rgba(0, 212, 255, 0.1);
+}
+
+/* First Column (Aspect) */
+.comparison-table td:first-child {
+  font-weight: bold;
+  color: #00ffcc;
+  width: 20%;
+}
+
+
+body {
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+    background: 
+        linear-gradient(to bottom, rgb(0, 0, 0) 60%, black 100%),  /* 🔹 overlay that fades into black */
+        url('ethics2.png') no-repeat center top/cover;                /* 🔹 your image at the top */
+    overflow-x: hidden;
+    color: white;
+}
+
+
+html, body {
+    height: 100%;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: url('ethics2.png') no-repeat center center/cover;
+    overflow-x: hidden;
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* Title */
+.site-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    letter-spacing: 2px;
+}
+
+/* Floating Intro Quotes */
+.quotes-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+.quote {
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    text-shadow: 0 0 10px #000, 0 0 20px #000;
+    animation: float 5s ease-in-out infinite, blink 10s infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+@keyframes blink {
+    0%, 20% { opacity: 0; }
+    30%, 60% { opacity: 1; }
+    70%, 100% { opacity: 0; }
+}
+
+/* Content Sections */
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+    margin-top: 85px;
+}
+.content > section {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* Section Titles */
+.content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #00d4ff;
+    text-shadow: 0 0 12px #000;
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.card {
+    width: 280px;
+    padding: 25px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.7);
+}
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00d4ff;
+}
+
+/* Section Wrapper */
+.timeline-section {
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* Title */
+.custom-h2 {
+  font-family: "Orbitron", monospace;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #00d4ff;
+  text-shadow: 0 0 12px #000;
+}
+
+.paragraph-large {
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto 40px;
+  max-width: 700px;
+  color: #ccc;
+}
+
+/* Timeline core */
+.timeline {
+  margin: 0 auto;
+  max-width: 55em;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0d71fc, #00d4ff);
+}
+
+/* Checkpoints */
+.checkpoint {
+  width: 50%;
+  padding: 2em 1.5em;
+  position: relative;
+}
+.checkpoint div {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1.5px solid #0d71fc;
+  border-radius: 1em;
+  padding: 1.5em;
+  box-shadow: 0 0 18px rgba(13, 113, 252, 0.5);
+}
+.checkpoint h3 {
+  color: #00d4ff;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+.checkpoint p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+/* Alternating position */
+.checkpoint:nth-child(odd) { left: 0; text-align: right; }
+.checkpoint:nth-child(even) { left: 50%; text-align: left; }
+
+/* Circles */
+.checkpoint::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.2em;
+  height: 1.2em;
+  background: #0d71fc;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0d71fc, 0 0 20px #00d4ff;
+}
+.checkpoint:nth-child(odd)::before { right: -0.6em; }
+.checkpoint:nth-child(even)::before { left: -0.6em; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline::before { left: 15px; }
+  .checkpoint {
+    width: 100%;
+    padding-left: 3em;
+    text-align: left !important;
+  }
+  .checkpoint::before { left: 0; }
+}
+/* Quotes Carousel */
+.quotes-carousel {
+    overflow: hidden;
+    position: relative;
+    height: 180px;
+}
+.quote-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+.quote-item.active {
+    opacity: 1;
+}
+
+/* Reflection */
+.reflection textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00d4ff;
+    border-radius: 8px;
+    color: white;
+    resize: none;
+}
+.reflection button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #00d4ff, #007bff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.reflection button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #00d4ff;
+}
+#submission-message {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #00ff99;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 85%;
+    }
+    .timeline-container {
+        padding-left: 15px;
+    }
+}
+</style>
+
+<script>
+  // Quote Carousel
+const quotes = document.querySelectorAll('.quote-item');
+let currentQuote = 0;
+
+function showNextQuote() {
+    quotes[currentQuote].classList.remove('active');
+    currentQuote = (currentQuote + 1) % quotes.length;
+    quotes[currentQuote].classList.add('active');
+}
+
+setInterval(showNextQuote, 5000);
+
+// Reflection
+const submitButton = document.getElementById('submit-reflection');
+const reflectionText = document.getElementById('reflection-text');
+const submissionMessage = document.getElementById('submission-message');
+
+submitButton.addEventListener('click', function() {
+    if (reflectionText.value.trim() !== '') {
+        submissionMessage.classList.remove('hidden');
+        reflectionText.value = '';
+        setTimeout(() => {
+            submissionMessage.classList.add('hidden');
+        }, 3000);
+    } else {
+        alert('Please enter your reflection.');
+    }
+});
+</script>
+

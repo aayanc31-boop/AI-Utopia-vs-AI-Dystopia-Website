@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dystopia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/ae1579c6e3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html" >Home</a></li>
+      <li><a href="System.html" >Utopia</a></li>
+      <li><a href="City.html" >Dystopia</a></li>
+      <li><a href="Choices.html" >Choices</a></li>
+      <li><a href="Ethics.html" >Ethics</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<body>
+
+    <img id="toggleImage" src="dystopian.png" alt="Dystopian Image">
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111; 
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fullscreen image */
+#toggleImage {
+    width: 100%;
+    height: 103%;
+    object-fit: cover; /* makes the image fill the screen */
+    transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out;
+    filter:brightness(1.4);
+}
+
+</style>
+
+<h1 class="site-title">Dystopia</h1>
+ <h2 class="subtitle">When AI is used to control, not empower</h2>
+
+<style>
+
+.site-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 8vw, 6rem);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subtitle {
+    position: absolute;
+    top: calc(43% + 2rem); /* pushes it below the title */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(0.7rem, 2.5vw, 1.3rem);
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+
+</style>
+
+<section class="advanced-ai-systems">
+  
+<h2 class="section-title">Where AI Could Go Wrong</h2>
+    <p class="section-subtitle">
+      Explore potential dystopian systems of AI in various sectors, how unchecked AI could reshape society in ways we never intended.
+    </p>
+
+    <div class="cards-grid">
+      <!-- Governance -->
+      <div class="flip-card" data-type="governance">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <i class="icon"><i class="fa-solid fa-gun"></i></i>
+            <h3>Autonomous Weapons</h3>
+            <p>AI controlled weapons</p>
+          </div>
+          <div class="flip-back">
+            <p>Autonomous weapons use AI to make deadly choices without humans, creating dangers of accidents, misuse, and uncontrollable wars worldwide.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Healthcare -->
+      <div class="flip-card" data-type="healthcare">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <i class="icon"><i class="fa-solid fa-heart-pulse"></i></i>
+            <h3>Health Risks </h3>
+            <p>Faulty AI Medicine</p>
+          </div>
+          <div class="flip-back">
+            <p>AI mistakes in healthcare, like wrong diagnoses or treatment errors, can harm patients, risking lives and trust in medicine.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="flip-card" data-type="education">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <i class="icon"><i class="fa-solid fa-mobile"></i></i>
+            <h3>Social Manipulation</h3>
+            <p>Manipulative AI</p>
+          </div>
+          <div class="flip-back">
+            <p>AI can spread fake news and targeted ads, manipulating beliefs, emotions, and politics, weakening democracy and creating social division.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Surveillance -->
+      <div class="flip-card" data-type="surveillance">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <i class="icon"><i class="fa-solid fa-eye"></i></i>
+            <h3>Surveillance</h3>
+            <p>Eroding Privacy</p>
+          </div>
+          <div class="flip-back">
+            <p>AI surveillance monitors daily life using cameras and data, threatening privacy, reducing freedom, and giving governments too much control.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Inline CSS (optional if you don't want to put it in style.css) -->
+<style>
+.advanced-ai-systems {
+  position: relative;
+  z-index: 1;
+  background: #000000;
+  padding: 100px 20px; /* reduced padding so title goes up */
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-family: "Orbitron", monospace;
+  color: #ff0000da;
+  margin-bottom: 20px; /* smaller gap under title */
+  text-shadow: 0 0 30px rgba(0, 191, 255, 0.861);
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #d0d0d0;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  line-height: 1.8;
+}
+
+.cards-grid {
+  display: flex; /* changed from grid to flex */
+  justify-content: center;
+  gap: 40px; /* spacing between cards */
+  flex-wrap: nowrap; /* keeps them in one line */
+}
+
+.flip-card {
+  perspective: 1500px;
+  width: 300px;  /* smaller width */
+  height: 300px; /* smaller height */
+  cursor: pointer;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: #fff;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.flip-front {
+  background-color: #222;
+}
+
+.flip-back {
+  background: #1a1a1a;
+  transform: rotateY(180deg);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.876);
+}
+
+.flip-card[data-type="governance"] .flip-back {
+  background: linear-gradient(135deg, #000000, #6699cc);
+  border: 3px solid #6699cc;  /* bluish border */
+}
+
+.flip-card[data-type="healthcare"] .flip-back {
+  background: linear-gradient(135deg, #000000, #66cc99);
+  border: 3px solid #66cc99;  /* greenish border */
+}
+
+.flip-card[data-type="education"] .flip-back {
+  background: linear-gradient(135deg, #000000, #9966cc);
+  border: 3px solid #9966cc;  /* purple border */
+}
+
+.flip-card[data-type="surveillance"] .flip-back {
+  background: linear-gradient(135deg, #000000, #cc6666);
+  border: 3px solid #cc6666;  /* red border */
+}
+
+.icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+@media (hover: hover) {
+  .flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-card[data-type="governance"] .flip-front { background: linear-gradient(135deg, #336699, #6699cc); }
+.flip-card[data-type="healthcare"] .flip-front { background: linear-gradient(135deg, #339966, #66cc99); }
+.flip-card[data-type="education"] .flip-front { background: linear-gradient(135deg, #663399, #9966cc); }
+.flip-card[data-type="surveillance"] .flip-front { background: linear-gradient(135deg, #993333, #cc6666); }
+</style>
+
+<!-- Flip JS -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const flipCards = document.querySelectorAll('.flip-card');
+  flipCards.forEach(card => {
+    card.addEventListener('click', function() {
+      if (!('ontouchstart' in window || navigator.maxTouchPoints)) return;
+      this.querySelector('.flip-inner').classList.toggle('clicked');
+    });
+  });
+});
+</script>
+
+
+<div class="carousel">
+
+    <div class="list">
+
+        <div class="item" style="background-image: url('dystopian.png');">
+            <div class="content">
+                <div class="title">Dystopia City</div>
+                <div class="des">Dystopia City is a place where technology no longer serves people but controls them. AI governs daily life with strict rules, constant monitoring, and little room for freedom. Streets are filled with screens broadcasting propaganda, while fear replaces trust among citizens. The city shines on the outside with futuristic systems, but underneath lies oppression, inequality, and the loss of what makes us truly human.</div>
+                <div class="btn">
+                    
+                    <a href="City.html" class="button">Back to Top</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url('Surveillance.png');">
+            <div class="content">
+                <div class="title">Surveillance</div>
+                <div class="des">In a dystopian AI city, surveillance is constant and unavoidable. Advanced facial recognition, cameras, and data tracking monitor every movement and conversation. Citizens lose their sense of freedom, knowing they are always being watched. This system creates fear and obedience rather than trust, as privacy becomes a luxury of the past and control lies fully in the hands of the authorities.</div>
+                <div class="btn">
+                    <button class="see-more" data-title="Surveillance" data-info="AI-enabled surveillance uses large camera networks, biometric matching (face and gait), and data fusion (phone, GPS, transaction logs) to give authorities 24/7 visibility over people’s movements. In practice that means automated face recognition systems can flag individuals at scale and in real time, allowing constant tracking across cities; this is already deployed at scale in some areas and has been shown to misidentify people (especially minorities), creating risks of wrongful stops and arrests. Machine learning models are trained on massive datasets of images and video; their performance depends on training data and labels. When those datasets under-represent groups or reflect biased policing, models produce biased outputs that reinforce discrimination — a technical failure that becomes a social injustice when used for policing, crowd control, or deportation decisions. Civil-rights groups and researchers have documented harms, and international human-rights organizations have called for strict limits or bans on some uses of face recognition. Video investigations and documentaries show how surveillance plus AI changes everyday life: increased self-censorship, chilling of protest, and targeted enforcement of laws with little oversight. The technological detail matters: the combination of edge cameras, cloud re-identification, and automated alerts lets a small number of operators surveil a whole population in ways that were impossible before deep learning scaled.">See More</button>
+                    <a href="City.html" class="button">Back to Top</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url('social-credit.png');">
+            <div class="content">
+                <div class="title">Social Credit</div>
+                <div class="des">The social credit system ranks every citizen based on behavior, online activity, and loyalty to the government. A single mistake, such as questioning authority, can lower your score and strip away opportunities for work, education, or even travel. Instead of fairness, AI enforces a system of control, where people live in fear of losing their basic rights to exist freely.</div>
+                <div class="btn">
+                    <button class="see-more" data-title="Social Credit" data-info="Social-credit systems that rank citizens become dystopian when they are powered by AI that aggregates data from purchases, social media, travel, and public records and then assigns scores that control rights (travel, job access, loans). In such systems, opaque machine-learning models act as gatekeepers — a single low score (or a false negative from a noisy model) can restrict basic freedoms. The Chinese pilot systems and city-level experiments are often cited as partial real-world precedents; coverage shows how automated scoring can be used for social control and behavior shaping.On the technical side, these systems depend on cross-domain data linking, feature engineering from digital footprints, and decision rules often hidden behind proprietary ML models. The result: feedback loops. If a model downgrades a person, their fewer opportunities produce behaviors that the model then reads as “risk,” making the score self-reinforcing. Policy analysts warn that without transparent models and appeal paths, algorithmic enforcement institutionalizes disadvantage.YouTube explainers and investigative journalism highlight the social and psychological effects: stigma, loss of privacy, and social sorting. When AI is used not just to recommend services but to gate them, “digital governance” becomes coercive governance in practice. ">See More</button>
+                    <a href="City.html" class="button">Back to Top</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url('Replacement.png');">
+            <div class="content">
+                <div class="title">AI Replacing</div>
+                <div class="des">In this city, AI replaces humans in almost every profession, from factories to offices and even creative fields. While machines work endlessly, unemployment rises, leaving families powerless and dependent. Human talent and individuality are undervalued, as efficiency becomes the only measure that matters. The result is a society where people feel useless, disconnected, and dependent on technology that cares nothing for human well-being.</div>
+                <div class="btn">
+                    <button class="see-more" data-title="AI Replacing" data-info="AI automation and large-scale machine learning are replacing routine cognitive and manual tasks (and increasingly some higher-cognitive workflows). Reports from major analyst groups show significant proportions of tasks across many jobs are automatable — this can increase productivity but also risks structural unemployment and widening inequality if displaced workers are not retrained at scale. The dystopian outcome is not just job loss but loss of livelihood security, depleted local economies, and deskilling of communities.Technically, advances in deep learning (vision, language models, and multimodal agents) enable automation of previously “human-only” tasks: document review, coding assistance, and content generation. Videos from reputable outlets demonstrate systems that write text, summarize law cases, and create images — all signs automation can hit white-collar professions as well as blue-collar ones. The risk increases when AI productivity gains concentrate in capitals and do not translate into broad employment programs.Dystopian scenarios appear when market forces and poor governance combine: large-scale displacement without social safety nets, weakening labor rights, and “ghost work” models that shift risk onto precarious human micro-workers. ">See More</button>
+                    <a href="City.html" class="button">Back to Top</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url('propoganda1.png');">
+            <div class="content">
+                <div class="title">Propaganda</div>
+                <div class="des">Propaganda floods the city through AI-controlled media, screens, and news feeds. False stories are designed to shape how people think and act, leaving little room for independent thought. Citizens are manipulated into believing lies while opposing voices are silenced. Over time, people lose the ability to question what is real, creating a society controlled not just by force, but by deception and fear.</div>
+                <div class="btn">
+                    <button class="see-more" data-title="Propaganda" data-info="AI transforms propaganda by enabling highly-targeted messaging, automated content creation (text, images, video), and rapid tailoring of narratives. Generative models can produce believable fake articles, synthetic videos (deepfakes), and personalized disinformation that exploits psychological profiling. Journalistic investigations and technical explainers show how deepfakes and bot networks can amplify false narratives at low cost, making manipulative campaigns far more scalable.From a technical perspective, deception leverages generative adversarial networks (GANs), diffusion models for images/video, and large language models for text. Combined with micro-targeting (ad-tech-style audience segmentation), this produces messaging that is both persuasive and hard to counter. Research and videos document real cases where synthetic media created confusion and harmed reputations; the dystopian risk is mass manipulation where truth becomes fragmented and trust in institutions collapses.Policy discussions and media pieces highlight that automated propaganda can be used not only by state actors but by commercial campaigns, extremist groups, and political operators to destabilize societies. ">See More</button>
+                    <a href="City.html" class="button">Back to Top</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url('No-privacy.png');">
+            <div class="content">
+                <div class="title">No Privacy</div>
+                <div class="des">Every action, purchase, and message is tracked by AI systems, leaving no space for personal freedom. Citizens cannot hide even their private thoughts, as algorithms predict behavior and expose secrets. Homes, workplaces, and streets are all monitored, making life feel like a prison. In this world, privacy is erased, and individuality disappears under the constant watch of an all-seeing machine.</div>
+                <div class="btn">
+                    <button class="see-more" data-title="No Privacy" data-info="AI systems require huge amounts of data to train and operate; in dystopian contexts that means constant harvesting of behavioral signals — location traces, purchase records, message metadata, search histories — to feed profiling models. Data brokers and governmental systems can fuse these streams; once fused, they enable inference about health, beliefs, political activity, and relationships, often without user consent or meaningful oversight. Investigative reports show how commercial and state actors build such profiles at scale.Technically, machine learning can infer sensitive attributes from innocuous data (e.g., predicting health or political leanings from phone-use patterns). That means privacy loss is not just raw data leakage but the inference layer: models can expose facts that individuals never willingly shared. Legal scholars warn that traditional privacy law struggles with these inferential harms.Videos and reports also show real-life harms: targeted repression, commercial exploitation, and chilling effects on free speech when people know their digital traces are used to profile or punish them. These sources provide both technical explanation and human consequences suitable for your project.">See More</button>
+                    <a href="City.html" class="button">Back to Top</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="background-image: url('AI-police.png');">
+            <div class="content">
+                <div class="title">AI Police</div>
+                <div class="des">The police force is no longer human, but fully controlled by AI. Machines patrol the streets, making arrests based on data rather than fairness. Mistakes lead to innocent people being punished, with no chance of appeal or compassion. Fear of the AI police keeps citizens obedient, but justice and humanity vanish. Authority becomes cold, unfeeling, and absolute, enforced by technology without a conscience.</div>
+                <div class="btn">
+                    <button class="see-more" data-title="AI Police" data-info="“AI police” means using algorithms to guide policing decisions (predictive policing, risk-scoring, automated alerts) and — increasingly — to automate parts of enforcement via robots, drones, or algorithm-suggested arrests. Case studies have shown predictive tools that map “hotspots” or assign individual risk scores, but evaluations reveal poor evidence of crime reduction and strong evidence of bias amplification, particularly in already-overpoliced communities.Technically, models ingest arrest records, social networks, and environmental data to produce risk scores; biases arise because historical policing data reflect past discrimination. Wrong assumptions or opaque models can create feedback loops that escalate enforcement in targeted neighborhoods. Documentaries and investigative reporting demonstrate wrongful arrests linked to flawed face-recognition matches and opaque risk systems — powerful evidence for a dystopian argument.AI police raises accountability problems: hidden model logic, lack of public oversight, and difficulty of appeal when an automated system labels a person “high risk.">See More</button>
+                    <a href="City.html" class="button">Back to Top</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--next prev button-->
+<div class="arrows">
+    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+</div>
+
+<!-- time running -->
+<div class="timeRunning"></div>
+
+<!-- Modal -->
+<div id="seeMoreModal" class="see-more-modal">
+    <div class="see-more-card">
+        <button class="see-more-close">✕</button>
+        <h2 id="seeMoreTitle"></h2>
+        <p id="seeMoreText"></p>
+    </div>
+</div>
+
+    </body>
+
+<style>
+    
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.see-more-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.see-more-card {
+    background: #747474;
+    color: #ffffff;
+    padding: 25px 35px;
+    border-radius: 32px;
+    max-width: 1200px;
+    width: 600%;
+    position: relative;
+}
+
+.see-more-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.see-more-card h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.see-more-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Header section */
+
+header{
+    width: 100%; 
+    max-width: 100%;
+    padding-left: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+header nav a{
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+a.active{
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+a:hover{
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+/* Header section */
+
+
+
+/* carousel */
+
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item{
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-70%);
+    left: 70%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 100;
+    transition: 1s;
+}
+
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .list .item:nth-child(3){
+    left: 67%;
+}
+
+.carousel .list .item:nth-child(4){
+    left: calc(67% + 200px);
+}
+
+.carousel .list .item:nth-child(5){
+    left: calc(67% + 400px);
+}
+
+.carousel .list .item:nth-child(6){
+    left: calc(67% + 600px);
+}
+
+.carousel .list .item:nth-child(n+7){
+    left: calc(67% + 800px);
+    opacity: 0;
+}
+
+
+
+
+
+.list .item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    width: 400px;
+    text-align: left;
+    color: #fff;
+    display: none;
+}
+
+.list .item:nth-child(2) .content{
+    display: block;
+}
+
+.content .title{
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content .name{
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 5px;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+
+.content .btn{
+    margin-left: 5px;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 1.2s 1 forwards;
+}
+
+.content .btn button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #fff;
+}
+
+.content .btn button:nth-child(1){
+    margin-right: 15px;
+}
+
+.content .btn button:nth-child(2){
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.content .btn button:nth-child(2):hover{
+    background-color: #14ff72cb;
+    color: #fff;
+    border-color: #14ff72cb;
+}
+
+
+@keyframes animate {
+
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+/* Carousel */
+
+
+
+
+
+
+/* next prev arrows */
+
+.arrows{
+    position: absolute;
+    top: 293%;
+    right: 48%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffffde;
+    color: #000000;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+/* time running */
+.carousel .timeRunning{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 4px;
+    background-color: #000000cb;
+    left: 0;
+    top: 0;
+    animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+
+    from{width: 0%;}
+    to{width: 100%;}
+
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 999px){
+
+    header{
+        padding-left: 50px;
+    }
+
+    .list .item .content{
+        left: 50px;
+    }
+
+    .content .title, .content .name{
+        font-size: 70px;
+    }
+
+    .content .des{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 690px){
+    header nav a{
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .list .item .content{
+        top: 40%;
+    }
+
+    .content .title, .content .name{
+        font-size: 45px;
+    }
+
+    .content .btn button{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+    
+    .button-container {
+    display: none;
+    gap: 10px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 15px 20px;
+    color: black;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+</style>
+<script>
+    
+    var nextBtn = document.querySelector('.next'),
+    prevBtn = document.querySelector('.prev'),
+    carousel = document.querySelector('.carousel'),
+    list = document.querySelector('.list'), 
+    item = document.querySelectorAll('.item'),
+    runningTime = document.querySelector('.carousel .timeRunning') 
+
+let timeRunning = 3000 
+let timeAutoNext = 7000
+
+nextBtn.onclick = function(){
+    showSlider('next')
+}
+
+prevBtn.onclick = function(){
+    showSlider('prev')
+}
+
+let runTimeOut 
+
+let runNextAuto = setTimeout(() => {
+    nextBtn.click()
+}, timeAutoNext)
+
+
+function resetTimeAnimation() {
+    runningTime.style.animation = 'none'
+    runningTime.offsetHeight /* trigger reflow */
+    runningTime.style.animation = null 
+    runningTime.style.animation = 'runningTime 7s linear 1 forwards'
+}
+
+
+function showSlider(type) {
+    let sliderItemsDom = list.querySelectorAll('.carousel .list .item')
+    if(type === 'next'){
+        list.appendChild(sliderItemsDom[0])
+        carousel.classList.add('next')
+    } else{
+        list.prepend(sliderItemsDom[sliderItemsDom.length - 1])
+        carousel.classList.add('prev')
+    }
+
+    clearTimeout(runTimeOut)
+
+    runTimeOut = setTimeout( () => {
+        carousel.classList.remove('next')
+        carousel.classList.remove('prev')
+    }, timeRunning)
+
+
+    clearTimeout(runNextAuto)
+    runNextAuto = setTimeout(() => {
+        nextBtn.click()
+    }, timeAutoNext)
+
+    resetTimeAnimation() // Reset the running time animation
+}
+
+// Start the initial animation 
+resetTimeAnimation()
+
+
+
+
+</script>
+
+<script>
+const modal = document.getElementById("seeMoreModal");
+const modalTitle = document.getElementById("seeMoreTitle");
+const modalText = document.getElementById("seeMoreText");
+const modalClose = document.querySelector(".see-more-close");
+
+document.querySelectorAll(".see-more").forEach(button => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalTitle.textContent = button.getAttribute("data-title");
+        modalText.textContent = button.getAttribute("data-info");
+        modal.style.display = "flex";
+    });
+});
+
+modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+});
+</script>
+
+<!-- 🔹 Chatbot Floating Widget -->
+<div id="chatbot-widget">
+  <!-- Toggle Button -->
+  <button id="chatbot-toggle">💬</button>
+
+  <!-- Chatbot Window -->
+  <div class="chatbot-window">
+    <div class="container">
+      <!-- App Header -->
+      <header class="app-header">
+        <h1 class="heading">Hello, there</h1>
+        <h4 class="sub-heading">How can I help you today?</h4>
+      </header>
+
+      <!-- Chats -->
+      <div class="chats-container"></div>
+
+      <!-- Prompt Input -->
+      <div class="prompt-container">
+        <div class="prompt-wrapper">
+          <form action="#" class="prompt-form">
+            <input type="text" placeholder="Ask Gemini" class="prompt-input" required />
+            <div class="prompt-actions">
+              <!-- File Upload Wrapper -->
+              
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* 🔹 Floating Chatbot Styles */
+#chatbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Small toggle button */
+#chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #1d7efd;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+#chatbot-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Chat window hidden by default */
+.chatbot-window {
+  display: none;
+  width: 380px;
+  height: 600px;
+  background: var(--primary-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+}
+
+/* When open */
+#chatbot-widget.active .chatbot-window {
+  display: block;
+}
+
+/* 🔹 Keep your existing chatbot styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --text-color: #edf3ff;
+  --subheading-color: #97a7ca;
+  --placeholder-color: #c3cdde;
+  --primary-color: #101623;
+  --secondary-color: #283045;
+  --secondary-hover-color: #333e58;
+  --scrollbar-color: #626a7f;
+}
+body.light-theme {
+  --text-color: #090c13;
+  --subheading-color: #7b8cae;
+  --placeholder-color: #606982;
+  --primary-color: #f3f7ff;
+  --secondary-color: #dce6f9;
+  --secondary-hover-color: #d2ddf2;
+  --scrollbar-color: #a2aac2;
+}
+body {
+  color: var(--text-color);
+  background: var(--primary-color);
+}
+.container {
+  overflow-y: auto;
+  padding: 32px 0 60px;
+  height: 100%;
+  scrollbar-color: var(--scrollbar-color) transparent;
+}
+.app-header {
+  margin-bottom: 40px;
+  padding: 0 24px;
+  text-align: center;
+}
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.sub-heading {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--subheading-color);
+}
+.chats-container {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.chats-container .chat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.chats-container .chat:last-child .chat-bubble {
+  border-bottom-right-radius: 4px;
+}
+.chats-container .chat.ai .chat-bubble {
+  border-bottom-left-radius: 4px;
+}
+.chats-container .chat.user {
+  align-items: flex-end;
+}
+.chats-container .chat.user .chat-bubble {
+  background: #3a496b;
+  color: #fff;
+}
+.chat-bubble {
+  max-width: 80%;
+  background: var(--secondary-color);
+  border-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  word-break: break-word;
+}
+.chat-bubble img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+.chat-bubble .file-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1d7efd;
+  text-decoration: none;
+}
+.chat-bubble .file-link:hover {
+  text-decoration: underline;
+}
+.chat-status {
+  font-size: 13px;
+  color: var(--subheading-color);
+}
+.prompt-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  background: var(--primary-color);
+  border-top: 1px solid var(--secondary-color);
+}
+.prompt-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.prompt-form {
+  position: relative;
+  width: 100%;
+}
+.prompt-input {
+  width: 100%;
+  border: none;
+  background: var(--secondary-color);
+  border-radius: 12px;
+  padding: 14px 72px 14px 20px;
+  font-size: 15px;
+  color: var(--text-color);
+  outline: none;
+  caret-color: var(--text-color);
+}
+.prompt-input::placeholder {
+  color: var(--placeholder-color);
+}
+.prompt-actions {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prompt-actions button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 20px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: background 0.2s ease;
+}
+.prompt-actions button:hover {
+  background: var(--secondary-hover-color);
+}
+.file-upload-wrapper {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.file-upload-wrapper img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.file-upload-wrapper input[type="file"] {
+  display: none;
+}
+.file-upload-wrapper button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: background 0.2s ease;
+}
+.file-upload-wrapper button:hover {
+  background: var(--secondary-hover-color);
+}
+#theme-toggle-btn,
+#delete-chats-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--subheading-color);
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+#theme-toggle-btn:hover,
+#delete-chats-btn:hover {
+  color: var(--text-color);
+}
+#theme-toggle-btn {
+  right: 56px;
+}
+.disclaimer-text {
+  margin-top: 26px;
+  font-size: 13px;
+  color: var(--subheading-color);
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .chatbot-window {
+    width: 90%;
+    max-width: 400px;
+    height: 80vh;
+    bottom: 20px;
+    right: 10px;
+    left: 10px;
+    margin: 0 auto;
+  }
+  #chatbot-widget {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+</style>
+
+<script>
+/* 🔹 Toggle Widget Open/Close */
+const widget = document.getElementById("chatbot-widget");
+const toggleBtn = document.getElementById("chatbot-toggle");
+toggleBtn.addEventListener("click", () => {
+  widget.classList.toggle("active");
+});
+
+/* 🔹 Your Gemini Chatbot JS */
+const container = document.querySelector(".container");
+const chatsContainer = document.querySelector(".chats-container");
+const promptForm = document.querySelector(".prompt-form");
+const promptInput = promptForm.querySelector(".prompt-input");
+const fileInput = promptForm.querySelector("#file-input");
+const fileUploadWrapper = promptForm.querySelector(".file-upload-wrapper");
+const themeToggleBtn = document.querySelector("#theme-toggle-btn");
+const deleteChatsBtn = document.querySelector("#delete-chats-btn");
+const sendPromptBtn = document.querySelector("#send-prompt-btn");
+const stopResponseBtn = document.querySelector("#stop-response-btn");
+const fileIconBtn = document.querySelector(".file-icon");
+const cancelFileBtn = document.querySelector("#cancel-file-btn");
+const addFileBtn = document.querySelector("#add-file-btn");
+const filePreview = document.querySelector(".file-preview");
+
+// API Setup
+const API_KEY = "AIzaSyAvUT6g97pWqAsfm0WpEOzrDwB4vX8KWqU"; // 🔹 Replace this with your Gemini API key
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
+let controller, typingInterval;
+const chatHistory = [];
+const userData = { message: "", file: {} };
+
+// Function to create a chat bubble
+const createChatBubble = (message, type, file = null) => {
+  const chat = document.createElement("div");
+  chat.classList.add("chat", type);
+
+  const chatBubble = document.createElement("div");
+  chatBubble.classList.add("chat-bubble");
+  chatBubble.textContent = message;
+
+  if (file) {
+    if (file.type.startsWith("image/")) {
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(file);
+      chatBubble.appendChild(img);
+    } else {
+      const fileLink = document.createElement("a");
+      fileLink.href = URL.createObjectURL(file);
+      fileLink.textContent = `Download ${file.name}`;
+      fileLink.classList.add("file-link");
+      chatBubble.appendChild(fileLink);
+    }
+  }
+
+  chat.appendChild(chatBubble);
+  return chat;
+};
+
+// Function to display a typing indicator
+const showTypingIndicator = () => {
+  const chat = document.createElement("div");
+  chat.classList.add("chat", "ai");
+
+  const chatBubble = document.createElement("div");
+  chatBubble.classList.add("chat-bubble");
+  chatBubble.textContent = "..."; // Typing indicator
+
+  chat.appendChild(chatBubble);
+  chatsContainer.appendChild(chat);
+  scrollToBottom();
+};
+
+// Function to handle the Gemini API response
+const handleGeminiResponse = async (response) => {
+  try {
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(data.error.message);
+    }
+
+    const content = data.candidates[0].content.parts[0].text;
+    return content;
+  } catch (error) {
+    console.error("Gemini API Error:", error);
+    return `Error: ${error.message}`;
+  }
+};
+
+// Function to simulate typing effect
+const typeText = (element, text, callback) => {
+  let index = 0;
+  typingInterval = setInterval(() => {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      scrollToBottom();
+    } else {
+      clearInterval(typingInterval);
+      callback();
+    }
+  }, 20);
+};
+
+// Function to add AI chat to the container
+const addAiChat = async (message, file = null) => {
+  const aiChat = createChatBubble("...", "ai");
+  chatsContainer.appendChild(aiChat);
+  scrollToBottom();
+
+  let geminiResponse;
+  try {
+    controller = new AbortController();
+
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        contents: [
+          {
+            parts: [{ text: message }],
+          },
+        ],
+      }),
+      signal: controller.signal,
+    };
+
+    const response = await fetch(API_URL, requestOptions);
+    geminiResponse = await handleGeminiResponse(response);
+  } catch (error) {
+    geminiResponse = `Error: ${error.message}`;
+  }
+
+  chatsContainer.removeChild(aiChat);
+  const newAiChat = createChatBubble("", "ai");
+  chatsContainer.appendChild(newAiChat);
+  scrollToBottom();
+
+  typeText(newAiChat.querySelector(".chat-bubble"), geminiResponse, () => {});
+};
+
+// Function to add user chat to the container
+const addUserChat = (message, file = null) => {
+  const userChat = createChatBubble(message, "user", file);
+  chatsContainer.appendChild(userChat);
+  scrollToBottom();
+};
+
+// Function to handle form submission
+const handleFormSubmit = async (e) => {
+  e.preventDefault();
+  const message = promptInput.value.trim();
+  if (!message && !userData.file.name) return;
+
+  addUserChat(message, userData.file.name ? userData.file : null);
+  addAiChat(message, userData.file.name ? userData.file : null);
+
+  chatHistory.push({ type: "user", message, file: userData.file });
+  promptInput.value = "";
+  userData.message = "";
+  userData.file = {};
+  filePreview.src = "";
+  filePreview.style.display = "none"; // hide preview when cleared
+  fileUploadWrapper.classList.remove("active");
+};
+
+// Function to scroll to the bottom of the chats container
+const scrollToBottom = () => {
+  container.scrollTop = container.scrollHeight;
+};
+
+// Function to toggle theme
+const toggleTheme = () => {
+  document.body.classList.toggle("light-theme");
+};
+
+// Function to delete all chats
+const deleteChats = () => {
+  chatsContainer.innerHTML = "";
+  chatHistory.length = 0;
+};
+
+// Function to handle file selection
+const handleFileSelect = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  userData.file = file;
+  filePreview.src = URL.createObjectURL(file);
+  filePreview.style.display = "block"; // show only when a file exists
+  fileUploadWrapper.classList.add("active");
+};
+
+// Event Listeners
+promptForm.addEventListener("submit", handleFormSubmit);
+themeToggleBtn.addEventListener("click", toggleTheme);
+deleteChatsBtn.addEventListener("click", deleteChats);
+fileInput.addEventListener("change", handleFileSelect);
+cancelFileBtn.addEventListener("click", () => {
+  userData.file = {};
+  filePreview.src = "";
+  filePreview.style.display = "none";
+  fileUploadWrapper.classList.remove("active");
+  fileInput.value = ""; // Reset the file input
+});
+
+stopResponseBtn.addEventListener("click", () => {
+  if (controller) {
+    controller.abort();
+    clearInterval(typingInterval);
+  }
+});
+</script>
+
+
+</body>
+</html>

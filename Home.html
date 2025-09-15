@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Future</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="background-image"></div>
+  <div class="site-header-mask"></div>
+
+ <nav class="navbar">
+    <ul>
+      <li><a href="Home.html" class="btn" >Home</a></li>
+      <li><a href="System.html" class="btn" >Utopia</a></li>
+      <li><a href="City.html" class ="btn" >Dystopia</a></li>
+      <li><a href="Choices.html" class ="btn">Choices</a></li>
+      <li><a href="Ethics.html" class = "btn">Ethics</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="site-title">AI: Utopia Vs Dystopia</h1>
+  <h2>Which future will we create?</h2>
+</header>
+
+<section class="container">
+ 
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- Theme ---------- */
+    :root{
+      --clr-primary: hsl(354,77%,53%);   /* red (used for icons) */
+      --clr-secondary: hsl(227,69%,52%); /* blue */
+      --clr-accent: hsl(195,100%,50%);   /* cyan */
+      --clr-surface: hsl(0, 0%, 0%);
+      --clr-background: hsl(0, 0%, 0%);
+      --clr-text: hsl(0,0%,85%);
+      --card: hsl(0, 0%, 0%);
+      --border: hsl(0, 0%, 0%);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--clr-text);
+      background: var(--clr-background);
+      line-height: 1.6;
+      min-height: 100vh; /* Ensure body takes at least the full viewport height */
+      display: flex;          /* Use flexbox to center content vertically */
+      flex-direction: column; /* Stack content vertically */
+    }
+
+    /* ---------- Section ---------- */
+    #about{
+      padding: 48px 24px; /* Reduced padding for smaller screens */
+      background: linear-gradient(180deg, var(--clr-surface) 0%, var(--clr-background) 100%);
+      flex-grow: 1;       /* Allow the section to grow and take available space */
+    }
+
+      #about{
+      position: relative; /* for smudge positioning */
+      padding: 48px 24px; /* Reduced padding for smaller screens */
+      background: linear-gradient(180deg, var(--clr-surface) 0%, var(--clr-background) 100%);
+      flex-grow: 1;       /* Allow the section to grow and take available space */
+      z-index: 1;
+    }
+
+    /* Smudged blur transitions */
+    #about::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--clr-surface) 100%);
+      filter: blur(25px);
+      z-index: -1;
+    }
+    #about::after {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to top, rgba(0,0,0,0) 0%, var(--clr-surface) 100%);
+      filter: blur(25px);
+      z-index: -1;
+    }
+
+    .container{max-width: 1200px; margin: 0 auto; padding: 0 15px;} /* Added padding to container */
+
+    .eyebrow{opacity:.7; letter-spacing:.12em; text-transform:uppercase; font-size:.9rem; margin-bottom:.25rem}
+
+    .headline{
+      font-family: "Orbitron", monospace;
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw + 1rem, 4.25rem);
+      line-height: 1.15;
+      text-align: center;
+      margin: 0 0 18px;
+      animation: fadeUp .8s ease both;
+    }
+
+.site-title {
+  font-weight: 800;
+  font-size: clamp(2em, 5.5vw, 6rem); /* change these values */
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  color: white; /* optional */
+}
+
+/* Style the subtitle */
+.site-header h2 {
+  font-size: 1.8rem;       /* make it bigger (default is ~1.5rem) */
+  font-weight: 600;
+  text-align: center;      /* center it under the main title */
+  margin-top: 0.5rem;      /* space between h1 and h2 */
+  color: #f2f2f2;             /* optional: softer color */
+  position: relative;      /* lets you move it if needed */
+  top: 10px;               /* move it down slightly */
+}
+
+
+    .lead{
+      max-width: 920px;
+      margin: 0 auto 48px;
+      font-size: clamp(1rem, .6vw + 1rem, 1.25rem);
+      text-align:center;
+      opacity:.9;
+      animation: fadeUp .9s ease both .08s;
+    }
+
+    /* ---------- Features Grid ---------- */
+    .features{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 32px; /* Reduced margin for smaller screens */
+    }
+    @media (min-width: 768px){ .features{ grid-template-columns: repeat(2, 1fr);} }
+    @media (min-width: 1100px){ .features{ grid-template-columns: repeat(4, 1fr);} }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px; /* Reduced padding */
+      text-align:center;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      transform: translateY(8px);
+      opacity: 0;
+      animation: fadeUp .7s ease both;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      min-height: 180px; /* Reduced minimum height */
+    }
+    .features .card:nth-child(1){ animation-delay: .12s; }
+    .features .card:nth-child(2){ animation-delay: .22s; }
+    .features .card:nth-child(3){ animation-delay: .32s; }
+    .features .card:nth-child(4){ animation-delay: .42s; }
+
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: hsl(0 0% 35%);
+    }
+
+    .icon{
+      width: 40px; height: 40px; margin: 0 auto 8px; display:block; /* Reduced sizes */
+      stroke-width: 2.2;
+    }
+    .title{font-weight:700; font-size:1rem; margin: 4px 0 8px;} /* Reduced sizes */
+    .desc{font-size:.9rem; opacity:.9} /* Reduced size */
+
+    /* ---------- Why Panel ---------- */
+    .why{
+      background: color-mix(in oklab, rgb(20 20 20) 85%, transparent);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px; /* Reduced padding */
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      text-align:center;
+      animation: fadeUp .8s ease both .5s;
+    }
+    .why h3{margin:0 0 8px; font-size:1.4rem} /* Reduced size */
+    .why p{max-width: 920px; margin: 0 auto}
+    .cta{
+      margin-top: 12px; /* Reduced margin */
+      display:inline-block;
+      padding: 10px 20px; /* Reduced padding */
+      border-radius: 999px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      background: linear-gradient(90deg, var(--clr-secondary), var(--clr-accent));
+      box-shadow: 0 8px 24px rgba(0,0,0,.35);
+      transform: translateY(0);
+      transition: transform .15s ease, filter .2s ease;
+    }
+    .cta:hover{ filter: brightness(1.08); transform: translateY(-2px); }
+    .cta:active{ transform: translateY(0); }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeUp{
+      from{opacity:0; transform: translateY(18px)}
+      to{opacity:1; transform: translateY(0)}
+    }
+
+    /* ---------- Responsive Adjustments ---------- */
+    @media (max-width: 600px) {
+      .headline { font-size: clamp(2rem, 7vw + .5rem, 3rem); } /* Further adjustments for very small screens */
+      .lead { font-size: 1rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== About Section ===== -->
+  <section id="about">
+    <div class="container">
+      <h2 class="headline">Explore AI's Impact on Tomorrow</h2>
+      <p class="lead">
+        Welcome to an interactive exploration of artificial intelligence's role in shaping our future cities.
+        This experience invites you to discover how AI could transform governance, healthcare, education,
+        and law enforcement—for better or worse.
+      </p>
+
+      <div class="features">
+        <!-- Card 1 -->
+        <article class="card">
+          <!-- Bar chart icon (primary/red) -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="hsl(354,77%,53%)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3v18h18" />
+            <rect x="6" y="10" width="3" height="6" rx="1" />
+            <rect x="11" y="7" width="3" height="9" rx="1" />
+            <rect x="16" y="4" width="3" height="12" rx="1" />
+          </svg>
+          <div class="title">Interactive Polls</div>
+          <p class="desc">Vote on how AI should be integrated into key societal systems and see real-time results from other users.</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <!-- Building icon (secondary/blue) -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="hsl(227,69%,52%)" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="3" width="8" height="18" rx="1"/>
+            <rect x="14" y="8" width="6" height="13" rx="1"/>
+            <path d="M7 6h2M7 10h2M7 14h2M17 11h2M17 14h2M17 17h2"/>
+          </svg>
+          <div class="title">City Visions</div>
+          <p class="desc">Compare utopian and dystopian futures to understand AI's dual potential for human society.</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <!-- Users icon (accent/cyan) -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="hsl(195,100%,50%)" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="8" r="3"/>
+            <path d="M2 20a7 7 0 0 1 14 0"/>
+            <circle cx="17" cy="9" r="2.5"/>
+            <path d="M22 20a6 6 0 0 0-8-5.5"/>
+          </svg>
+          <div class="title">Story Choices</div>
+          <p class="desc">Navigate through branching narratives where your decisions shape the future of AI-human coexistence.</p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <!-- Eye icon (primary/red) -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="hsl(354,77%,53%)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/>
+            <circle cx="12" cy="12" r="3.5"/>
+          </svg>
+          <div class="title">Ethics Lab</div>
+          <p class="desc">Grapple with moral dilemmas and philosophical questions about AI's role in human decision-making.</p>
+        </article>
+      </div>
+
+      <section id="what-is-ai">
+  <div class="container">
+    <h2 class="headline">What is AI?</h2>
+    <p class="lead">
+      Artificial Intelligence (AI) is the science of creating machines and software that can perform tasks
+      normally requiring human intelligence. This includes learning, reasoning, problem-solving, understanding
+      language, and recognizing patterns. AI is transforming industries, education, and healthcare, but it also
+      raises important ethical and social questions about how it should be used responsibly.
+    </p>
+  </div>
+</section>
+
+      <div class="why">
+        <h3>Why This Matters</h3>
+        <p>
+          The decisions we make today about AI development and implementation will define tomorrow's world.
+          By exploring both the promise and peril of artificial intelligence, we can work toward a future that
+          amplifies human potential while safeguarding our values, autonomy, and wellbeing. Your voice in this
+          conversation matters—every choice you make here reflects the larger choices our society faces.
+        </p>
+        <div class="cta-buttons">
+    <a href="System.html" class="cta utopia-btn">Explore Utopia</a>
+    <a href="City.html" class="cta dystopia-btn">Face Dystopia</a>
+  </div>
+</div>
+
+
+
+<style>
+  .cta-buttons {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between the buttons */
+  }
+
+  #what-is-ai {
+  padding: 48px 24px;
+  background: linear-gradient(180deg, var(--clr-surface) 0%, var(--clr-background) 100%);
+  text-align: center;
+  animation: fadeUp .8s ease both .2s;
+}
+
+#what-is-ai .headline {
+  margin-bottom: 20px;
+}
+
+#what-is-ai .lead {
+  max-width: 920px;
+  margin: 0 auto;
+  font-size: clamp(1rem, .6vw + 1rem, 1.25rem);
+  opacity: .9;
+}
+
+  .cta.utopia-btn {
+    background: linear-gradient(90deg, var(--clr-secondary), var(--clr-accent));
+  }
+
+  .cta.dystopia-btn {
+    background: linear-gradient(90deg, hsl(354,77%,53%), hsl(0, 90%, 40%));
+  }
+
+  .cta.utopia-btn:hover {
+    filter: drop-shadow(0 0 8px var(--clr-accent)) brightness(1.1);
+  }
+
+  .cta.dystopia-btn:hover {
+    filter: drop-shadow(0 0 8px hsl(354,77%,53%)) brightness(1.1);
+  }
+
+  
+</style>
+     
+
+</body>
+</html>

@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utopia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/ae1579c6e3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html" >Home</a></li>
+      <li><a href="System.html" >Utopia</a></li>
+      <li><a href="City.html" >Dystopia</a></li>
+      <li><a href="Choices.html" >Choices</a></li>
+      <li><a href="Ethics.html" >Ethics</a></li>
+    </ul>
+  </nav>
+
+  <h2 class="subtitle">Where AI and humanity thrive together</h2>
+
+  
+
+</header>
+
+<!-- Cover section -->
+<section class="video-section">
+  <div class="image-bg"></div>
+</section>
+
+<style>
+.video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-section .image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('utopian.png') no-repeat center center/cover;
+   filter: brightness(1.2);
+  z-index: -1;
+}
+
+.subtitle {
+    position: absolute;
+    top: calc(43% + 2rem); /* pushes it below the title */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(0.7rem, 2.5vw, 1.6rem);
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+</style>
+
+
+
+
+<section class="advanced-ai-systems">
+  
+<h2 class="section-title">AI Systems Shaping a Better World</h2>
+    <p class="section-subtitle">
+      Explore the advanced AI systems shaping our future. Hover over each card for insights on desktop, tap for mobile and tablet.
+    </p>
+
+    <div class="cards-grid">
+      <!-- Governance -->
+      <div class="flip-card" data-type="governance">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <i class="icon"><i class="fa-solid fa-school"></i></i>
+            <h3>Governance</h3>
+            <p>Democratic AI Decision Making</p>
+          </div>
+          <div class="flip-back">
+            <p>AI governance ensures fairness, accountability, and transparency in decision-making systems. It addresses ethical concerns and societal impacts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Healthcare -->
+      <div class="flip-card" data-type="healthcare">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <i class="icon"><i class="fa-solid fa-heart-pulse"></i></i>
+            <h3>Healthcare</h3>
+            <p>Predictive Medical AI</p>
+          </div>
+          <div class="flip-back">
+            <p>AI in healthcare enables predictive diagnosis, personalized treatment planning, and efficient patient care optimization, leading to better health outcomes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="flip-card" data-type="education">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <i class="icon"><i class="fa-solid fa-graduation-cap"></i></i>
+            <h3>Education</h3>
+            <p>Personalized Learning AI</p>
+          </div>
+          <div class="flip-back">
+            <p>AI-driven educational tools adapt lessons to individual learning styles, provide customized feedback, and improve education accessibility and effectiveness.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Surveillance -->
+      <div class="flip-card" data-type="surveillance">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <i class="icon"><i class="fa-solid fa-eye"></i></i>
+            <h3>Surveillance</h3>
+            <p>Monitoring & Security AI</p>
+          </div>
+          <div class="flip-back">
+            <p>Surveillance AI monitors environments, enhances security measures, detects potential risks in real-time, and aids in crime prevention and safety management.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Inline CSS (optional if you don't want to put it in style.css) -->
+<style>
+
+.advanced-ai-systems {
+  position: relative;
+  z-index: 1;
+  background: #000000;
+  padding: 100px 20px; /* reduced padding so title goes up */
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  font-family: "Orbitron", monospace;
+  color: #00bfffda;
+  margin-bottom: 20px; /* smaller gap under title */
+  text-shadow: 0 0 30px rgba(0, 191, 255, 0.861);
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #d0d0d0;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  line-height: 1.8;
+}
+
+.cards-grid {
+  display: flex; /* changed from grid to flex */
+  justify-content: center;
+  gap: 40px; /* spacing between cards */
+  flex-wrap: nowrap; /* keeps them in one line */
+}
+
+.flip-card {
+  perspective: 1500px;
+  width: 300px;  /* smaller width */
+  height: 300px; /* smaller height */
+  cursor: pointer;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: #fff;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.flip-front {
+  background-color: #222;
+}
+
+.flip-back {
+  background: #1a1a1a;
+  transform: rotateY(180deg);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.876);
+}
+
+.flip-card[data-type="governance"] .flip-back {
+  background: linear-gradient(135deg, #000000, #6699cc);
+  border: 3px solid #6699cc;  /* bluish border */
+}
+
+.flip-card[data-type="healthcare"] .flip-back {
+  background: linear-gradient(135deg, #000000, #66cc99);
+  border: 3px solid #66cc99;  /* greenish border */
+}
+
+.flip-card[data-type="education"] .flip-back {
+  background: linear-gradient(135deg, #000000, #9966cc);
+  border: 3px solid #9966cc;  /* purple border */
+}
+
+.flip-card[data-type="surveillance"] .flip-back {
+  background: linear-gradient(135deg, #000000, #cc6666);
+  border: 3px solid #cc6666;  /* red border */
+}
+
+.icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+@media (hover: hover) {
+  .flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-card[data-type="governance"] .flip-front { background: linear-gradient(135deg, #336699, #6699cc); }
+.flip-card[data-type="healthcare"] .flip-front { background: linear-gradient(135deg, #339966, #66cc99); }
+.flip-card[data-type="education"] .flip-front { background: linear-gradient(135deg, #663399, #9966cc); }
+.flip-card[data-type="surveillance"] .flip-front { background: linear-gradient(135deg, #993333, #cc6666); }
+</style>
+
+<!-- Flip JS -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const flipCards = document.querySelectorAll('.flip-card');
+  flipCards.forEach(card => {
+    card.addEventListener('click', function() {
+      if (!('ontouchstart' in window || navigator.maxTouchPoints)) return;
+      this.querySelector('.flip-inner').classList.toggle('clicked');
+    });
+  });
+});
+</script>
+
+<h1 class="site-title">Utopia</h1>
+
+
+<style>
+
+.site-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 8vw, 6rem);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+}
+
+
+   
+   body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* 0.35 = slightly dark */
+    z-index: 0; /* Just above background, below text */
+}
+
+/* Make sure your text stays on top */
+h1 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    top: 40%;
+}
+
+</style>
+
+<body>
+    <div class="banner">
+        <div class="slider" style="--quantity:6">
+            <div class="item" style="--position:1" data-info="Artificial Intelligence is fundamentally transforming healthcare—making it faster, more accurate, and
+more accessible than ever before. Advanced machine learning models can analyze medical images to
+detect diseases such as cancer, tuberculosis, and diabetic retinopathy, often earlier and more reliably
+than traditional methods. For example, Google Health’s AI has demonstrated superior performance in
+identifying breast cancer from mammograms, outperforming radiologists in some studies.
+In surgical settings, AI-powered robotic systems assist with precision, reducing human error and
+improving patient outcomes. Meanwhile, in underserved regions, platforms like Babylon Health offer
+virtual consultations and symptom assessments via smartphones, helping bridge gaps in medical access
+and empowering individuals to receive timely advice without needing to visit a clinic.
+AI is also accelerating medical research. DeepMind’s AlphaFold has predicted the structure of over 200
+million proteins—a breakthrough that supports drug discovery and deepens our understanding of
+biology. This innovation is already influencing treatments for diseases like malaria, cancer, and antibiotic
+resistance.
+Looking ahead, AI could revolutionize healthcare through personalized medicine, where treatments are
+tailored to an individual’s genetic makeup, lifestyle, and environment. This approach promises better
+health outcomes, fewer side effects, and longer, healthier lives. AI systems may detect diseases at a pre-
+symptomatic stage, enabling early intervention and less invasive treatments—dramatically reducing the
+burden of chronic illnesses and improving public health.
+As AI becomes more integrated into healthcare systems, quality, consistency, and accessibility will
+improve globally. Primary care—including mental health and chronic disease management—could
+become universally available and nearly free. AI will also augment biotechnology to create precision
+medicines that are effective, scalable, and affordable.
+Specialized physicians, such as oncologists, will have access to terabytes of real-time research and
+patient data, allowing them to make more informed decisions. AI-powered diagnostic systems will
+operate 24/7, offering continuous care and modeling outcomes with unmatched depth. Human doctors
+will still play a vital role—especially in empathetic care and complex judgment—but AI will handle the
+heavy lifting, freeing clinicians to focus on what matters most: the human connection.">
+                <img src="Doctor.png" alt="AI in Healthcare">
+                 <div class="overlay-text">AI in Healthcare</div>
+                <button class="info-btn" data-info="Doctors + AI: improved diagnostics, early detection, and accessible healthcare for all.">+</button>
+            </div>
+            <div class="item" style="--position:2" data-info="Artificial Intelligence is becoming a cornerstone of global sustainability, helping industries and governments tackle climate change, transition to clean energy, and reduce environmental impact. By analyzing massive datasets and optimizing complex systems, AI is driving smarter solutions for the planet.
+ Climate Action & Environmental Monitoring
+AI enables real-time tracking of deforestation, melting ice, and extreme weather, offering faster and more accurate climate predictions. It supports reforestation projects, clean energy adoption in vulnerable regions, and even waste management and ocean cleanup—like Greyparrot’s AI for recycling and The Ocean Cleanup’s plastic detection systems.
+ Clean Energy Innovation
+AI is accelerating renewable energy by forecasting demand, improving grid efficiency, and optimizing solar, wind, and geothermal power. It also plays a key role in fusion research, where scientists are using AI to design experiments that bring us closer to limitless, clean electricity.
+ Sustainable AI Infrastructure
+Though AI consumes significant energy, green innovations are reducing its footprint. Google’s DeepMind cut cooling energy in data centers by 40% using AI optimization, while companies like Microsoft and AWS invest in hydrogen, solar, and carbon-aware cloud systems. Advances in algorithms and hardware efficiency are making AI more powerful while using less energy.
+">
+                <img src="Clear-energy.png" alt="Clean Energy">
+                <div class="overlay-text">AI in Clean Energy</div>
+                <button class="info-btn" data-info="Clean energy systems using AI to predict demand, cut waste and power cities sustainably.">+</button>
+            </div>
+            <div class="item" style="--position:3" data-info="Artificial Intelligence is transforming education by making learning more personalized, adaptive, and accessible than ever before. Instead of one-size-fits-all teaching, AI tailors lessons to each student’s pace, style, and gaps in knowledge, helping learners stay engaged and achieve better results.
+Personalized Learning
+Platforms like Khan Academy and Duolingo already use AI to adapt lessons to individual needs. AI tutors, such as Socratic by Google, guide students through problem-solving, while tools like IBM Watson Education help teachers identify learning gaps and provide targeted support.
+With AI, every student could have a 24/7 personal tutor, capable of delivering high-quality education in any subject. This has the potential to democratize knowledge by making world-class learning available to anyone—regardless of where they live or their economic background.
+Accessibility and Inclusion
+AI also enhances accessibility in education. Real-time translation, speech-to-text, and assistive technologies ensure that students with different abilities and learning needs are fully included. In a world shaped by AI, a child’s education would no longer be limited by geography, wealth, or even disability.
+A Vision for the Future
+AI could unlock a future where education is nearly free, available everywhere, and accessible to all. Imagine a world where public school districts or the zip code you are born into no longer determine your opportunities in life. Instead, AI-powered tutors and supportive human mentors would give students the freedom to explore, discover passions, and learn at their own pace—bringing them closer to true independence and creativity.
+Globally, AI may be our only chance to provide near-free, high-quality tutoring across countless subjects. Such a shift could unleash opportunity, self-confidence, passion, hope, and even greater gender equity, especially for those who currently lack resources or infrastructure for proper education.
+">
+                <img src="Learning.png" alt="Learning">
+                <div class="overlay-text">AI in Learning</div>
+                <button class="info-btn" data-info="Adaptive learning: AI personalises lessons so students learn at their own pace.">+</button>
+            </div>
+            <div class="item" style="--position:4" data-info="Artificial Intelligence has the potential to transform transportation into a safer, faster, and more sustainable system. In a utopian future, AI would seamlessly coordinate vehicles, infrastructure, and logistics to create an efficient, equitable, and eco-friendly network.
+Autonomous Vehicles & Safety
+Self-driving cars, buses, and trucks could eliminate most human-error accidents. AI-powered vehicles would communicate in real time, anticipate traffic patterns, and ensure the safety of passengers and pedestrians. Roads would prioritize optimized traffic flow, reducing congestion and stress.
+Smart Traffic Management
+AI could manage entire city traffic systems, adjusting signals, tolls, and lane priorities dynamically. Public transport would become predictive, reliable, and integrated, making commuting faster and more convenient for everyone.
+Green & Sustainable Transit
+By optimizing routes, energy use, and vehicle deployment, AI would lower emissions. Electric and hydrogen fleets, coordinated charging stations, and shared autonomous vehicles could reduce pollution and the need for parking infrastructure.
+Efficient Logistics
+Autonomous trucks, drones, and smart warehouses would make goods delivery faster, more efficient, and environmentally friendly. AI-driven supply chains would be adaptive, resilient, and globally accessible, including rural and underserved areas.
+Mobility for All
+AI-powered transport would ensure equitable access, serving the elderly, differently-abled, and marginalized groups. Public transit could match or surpass private vehicles in speed and convenience, making cities more inclusive.
+In summary: AI could revolutionize transportation by improving safety, efficiency, sustainability, and accessibility, creating a truly seamless and inclusive mobility future.
+">
+                <img src="Transport.png" alt="Transport">
+                <div class="overlay-text">AI in Transport</div>
+                <button class="info-btn" data-info="Smart transport coordinates vehicles & reduces congestion and emissions.">+</button>
+            </div>
+            <div class="item" style="--position:5" data-info="In a utopian future, Artificial Intelligence transforms agriculture into an efficient, sustainable, and inclusive system. Rather than replacing farmers, AI acts as a partner—feeding a growing population while protecting the environment.
+Precision Farming & Resource Efficiency
+AI-powered drones, sensors, and satellites enable precision farming, where soil, water, and crop health are monitored in real time. This ensures irrigation, fertilizers, and pesticides are applied only when and where needed, boosting yields, reducing costs, and minimizing environmental harm.
+Automated Robotics & Smart Machinery
+Self-driving tractors, robotic harvesters, and automated greenhouses bring accuracy and efficiency to farming. These systems reduce labor challenges, pick only ripe crops, and minimize waste, while vertical farms in cities use less land, water, and chemicals.
+Climate Resilience & Predictive Insights
+AI forecasting tools predict pests, droughts, and floods, helping farmers prepare in advance. Initiatives like India’s Saagu Baagu show how AI-powered chatbots can give small farmers personalized advice, improving yields and resilience even in challenging conditions.
+Inclusive & Sustainable Food Systems
+Affordable AI tools and mobile-based platforms make advanced farming accessible to smallholders, ensuring equity. Open data-sharing and community-driven models create global inclusivity in sustainable food production.
+Streamlined Supply Chains & Food Security
+AI enhances supply chains by predicting demand, reducing waste, and improving traceability. From quality sorting to fair pricing, it ensures fresh produce reaches everyone while strengthening trust between farmers and consumers.
+Summary
+In this utopian vision, AI enhances productivity, sustainability, and equity in agriculture. By uniting technology with nature, it empowers farmers and ensures food security for all.
+">
+                <img src="Agriculture.png" alt="Agriculture">
+                <div class="overlay-text">AI in Agriculture</div>
+                <button class="info-btn" data-info="AI-assisted agriculture increases yields while reducing resource use.">+</button>
+            </div>
+            <div class="item" style="--position:6" data-info="Imagine living in a future where your home understands you, takes care of you, and fits seamlessly into your life. In a utopian society, AI-powered homes become intelligent companions that enhance well-being, comfort, and efficiency.
+Advances showcased at IFA 2025 reveal homes that think ahead. AI assistants like Google’s Gemini for the Home and Alexa Plus can anticipate needs—adjusting lighting, temperature, or music based on your mood—while keeping your privacy secure by processing data locally The Verge.
+Samsung’s smart ecosystem takes this further by learning household routines: it recognizes when elderly family members need help or when pets are restless, then responds intuitively by adjusting blinds, playing soothing sounds, or managing the air conditioner—all backed by strong on-device security using Knox and blockchain encryption Homes and Gardens.
+Even everyday appliances are getting smarter. Hisense’s AI-powered air conditioner uses presence detection to adjust airflow and purify air intelligently. Its voice assistant and energy-saving AI ensure comfortable, eco-friendly living Tom's Guide.
+In this vision of utopia, AI handles mundane tasks—anticipating your preferences, learning your habits, and ensuring everything runs smoothly—while prioritizing energy efficiency, safety, and personalized living.
+">
+                <img src="Home.png" alt="Home">
+                <div class="overlay-text">AI in Smart Home</div>
+                <button class="info-btn" data-info="Smart homes: automation for comfort, efficiency and safety.">+</button>
+            </div>
+        </div>
+        <div class="center-image">
+            <img src="robot-staring.png" alt="AI Robot">
+        </div>
+    </div>
+
+    <style>
+    .banner {
+        width: 100%;
+        height: 102vh;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        background-color: lightgray;
+        z-index: 0;
+    }
+
+    .overlay-text {
+  position: absolute;
+  bottom: 10px;          /* distance from bottom of image */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;       /* bigger text */
+  font-weight: bold;     /* bold text */
+  color: white;          /* text color */
+  text-shadow: 1px 1px 5px black; /* make it readable on image */
+}
+
+    .banner .slider {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        top: 19%;
+        left: calc(50% - 125px);
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        animation: autoRun 20s linear infinite;
+        z-index: 2;
+    }
+
+    @keyframes autoRun {
+        from {
+            transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+        }
+        to {
+            transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+        }
+    }
+
+    .banner .slider .item {
+        position: absolute;
+        inset: 0 0 0 0;
+        transform:
+            rotateY(calc((var(--position) - 1) * 60deg))
+            translateZ(550px);
+    }
+
+    .banner .slider .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .center-image {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 700px;
+        z-index: 1;
+        opacity: 0.9;
+    }
+
+    .center-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* ---- ADDED for + button ---- */
+    .banner .slider .item {
+        position: absolute;
+    }
+    .banner .slider .item .info-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      background: rgb(0, 0, 0);
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .banner .slider .item .info-btn:hover {
+      background: rgb(0, 0, 0);
+      transform: scale(1.1);
+    }
+
+    /* Modal */
+    .info-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+    .info-card {
+      background: #ffffff;
+      color: #000000;
+      padding: 20px;
+      border-radius: 32px;
+      max-width: 1650px;
+      width: 1400px;
+      height: 90%;
+      top: 3%;
+      position: relative;
+    }
+    .info-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #000000;
+      cursor: pointer;
+    }
+    </style>
+
+<div class="header-banner">
+  <h1 class="page-header">Utopian Cities</h1>
+</div>
+
+<style>
+  .header-banner {
+    position: absolute;
+    top: 215%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #1b8d80, #6fc3c0, #a3a0a0);
+    padding: 8px 1000px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    text-align: center;
+  }
+
+  .page-header {
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    background: linear-gradient(90deg, #fff, #e0f7f5, #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+</style>
+
+<!-- Modal -->
+<div id="infoModal" class="info-modal">
+  <div class="info-card">
+    <button class="info-close">✕</button>
+    <h4 id="infoTitle">Info</h4>
+    <p id="infoText">Details go here</p>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('infoModal');
+  const infoText = document.getElementById('infoText');
+  const infoTitle = document.getElementById('infoTitle');
+  const closeBtn = document.querySelector('.info-close');
+
+  function openModal(info, title) {
+    infoText.textContent = info;
+    infoTitle.textContent = title;
+    modal.style.display = 'flex';
+  }
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  document.querySelectorAll('.banner .slider .item').forEach(item => {
+    const img = item.querySelector('img');
+    const btn = item.querySelector('.info-btn');
+    const info = item.getAttribute('data-info');
+    const title = img.alt;
+
+    // Click on item
+    item.addEventListener('click', () => openModal(info, title));
+    // Click on button
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openModal(info, title);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+</script>
+</body>
+
+<!-- 🔹 Chatbot Floating Widget -->
+<div id="chatbot-widget">
+  <!-- Toggle Button -->
+  <button id="chatbot-toggle">💬</button>
+
+  <!-- Chatbot Window -->
+  <div class="chatbot-window">
+    <div class="container">
+      <!-- App Header -->
+      <header class="app-header">
+        <h1 class="heading">Hello, there</h1>
+        <h4 class="sub-heading">How can I help you today?</h4>
+      </header>
+
+      <!-- Chats -->
+      <div class="chats-container"></div>
+
+      <!-- Prompt Input -->
+      <div class="prompt-container">
+        <div class="prompt-wrapper">
+          <form action="#" class="prompt-form">
+            <input type="text" placeholder="Ask Gemini" class="prompt-input" required />
+            <div class="prompt-actions">
+              <!-- File Upload Wrapper -->
+              
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* 🔹 Floating Chatbot Styles */
+#chatbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Small toggle button */
+#chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #1d7efd;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+#chatbot-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Chat window hidden by default */
+.chatbot-window {
+  display: none;
+  width: 380px;
+  height: 600px;
+  background: var(--primary-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+}
+
+/* When open */
+#chatbot-widget.active .chatbot-window {
+  display: block;
+}
+
+/* 🔹 Keep your existing chatbot styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --text-color: #edf3ff;
+  --subheading-color: #97a7ca;
+  --placeholder-color: #c3cdde;
+  --primary-color: #101623;
+  --secondary-color: #283045;
+  --secondary-hover-color: #333e58;
+  --scrollbar-color: #626a7f;
+}
+body.light-theme {
+  --text-color: #090c13;
+  --subheading-color: #7b8cae;
+  --placeholder-color: #606982;
+  --primary-color: #f3f7ff;
+  --secondary-color: #dce6f9;
+  --secondary-hover-color: #d2ddf2;
+  --scrollbar-color: #a2aac2;
+}
+body {
+  color: var(--text-color);
+  background: var(--primary-color);
+}
+.container {
+  overflow-y: auto;
+  padding: 32px 0 60px;
+  height: 100%;
+  scrollbar-color: var(--scrollbar-color) transparent;
+}
+.app-header {
+  margin-bottom: 40px;
+  padding: 0 24px;
+  text-align: center;
+}
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.sub-heading {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--subheading-color);
+}
+.chats-container {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.chats-container .chat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.chats-container .chat:last-child .chat-bubble {
+  border-bottom-right-radius: 4px;
+}
+.chats-container .chat.ai .chat-bubble {
+  border-bottom-left-radius: 4px;
+}
+.chats-container .chat.user {
+  align-items: flex-end;
+}
+.chats-container .chat.user .chat-bubble {
+  background: #3a496b;
+  color: #fff;
+}
+.chat-bubble {
+  max-width: 80%;
+  background: var(--secondary-color);
+  border-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  word-break: break-word;
+}
+.chat-bubble img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+.chat-bubble .file-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1d7efd;
+  text-decoration: none;
+}
+.chat-bubble .file-link:hover {
+  text-decoration: underline;
+}
+.chat-status {
+  font-size: 13px;
+  color: var(--subheading-color);
+}
+.prompt-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  background: var(--primary-color);
+  border-top: 1px solid var(--secondary-color);
+}
+.prompt-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.prompt-form {
+  position: relative;
+  width: 100%;
+}
+.prompt-input {
+  width: 100%;
+  border: none;
+  background: var(--secondary-color);
+  border-radius: 12px;
+  padding: 14px 72px 14px 20px;
+  font-size: 15px;
+  color: var(--text-color);
+  outline: none;
+  caret-color: var(--text-color);
+}
+.prompt-input::placeholder {
+  color: var(--placeholder-color);
+}
+.prompt-actions {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prompt-actions button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 20px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: background 0.2s ease;
+}
+.prompt-actions button:hover {
+  background: var(--secondary-hover-color);
+}
+.file-upload-wrapper {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.file-upload-wrapper img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.file-upload-wrapper input[type="file"] {
+  display: none;
+}
+.file-upload-wrapper button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: background 0.2s ease;
+}
+.file-upload-wrapper button:hover {
+  background: var(--secondary-hover-color);
+}
+#theme-toggle-btn,
+#delete-chats-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--subheading-color);
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+#theme-toggle-btn:hover,
+#delete-chats-btn:hover {
+  color: var(--text-color);
+}
+#theme-toggle-btn {
+  right: 56px;
+}
+.disclaimer-text {
+  margin-top: 26px;
+  font-size: 13px;
+  color: var(--subheading-color);
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .chatbot-window {
+    width: 90%;
+    max-width: 400px;
+    height: 80vh;
+    bottom: 20px;
+    right: 10px;
+    left: 10px;
+    margin: 0 auto;
+  }
+  #chatbot-widget {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+</style>
+
+<script>
+/* 🔹 Toggle Widget Open/Close */
+const widget = document.getElementById("chatbot-widget");
+const toggleBtn = document.getElementById("chatbot-toggle");
+toggleBtn.addEventListener("click", () => {
+  widget.classList.toggle("active");
+});
+
+/* 🔹 Your Gemini Chatbot JS */
+const container = document.querySelector(".container");
+const chatsContainer = document.querySelector(".chats-container");
+const promptForm = document.querySelector(".prompt-form");
+const promptInput = promptForm.querySelector(".prompt-input");
+const fileInput = promptForm.querySelector("#file-input");
+const fileUploadWrapper = promptForm.querySelector(".file-upload-wrapper");
+const themeToggleBtn = document.querySelector("#theme-toggle-btn");
+const deleteChatsBtn = document.querySelector("#delete-chats-btn");
+const sendPromptBtn = document.querySelector("#send-prompt-btn");
+const stopResponseBtn = document.querySelector("#stop-response-btn");
+const fileIconBtn = document.querySelector(".file-icon");
+const cancelFileBtn = document.querySelector("#cancel-file-btn");
+const addFileBtn = document.querySelector("#add-file-btn");
+const filePreview = document.querySelector(".file-preview");
+
+// API Setup
+const API_KEY = "AIzaSyAvUT6g97pWqAsfm0WpEOzrDwB4vX8KWqU"; // 🔹 Replace this with your Gemini API key
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
+let controller, typingInterval;
+const chatHistory = [];
+const userData = { message: "", file: {} };
+
+// Function to create a chat bubble
+const createChatBubble = (message, type, file = null) => {
+  const chat = document.createElement("div");
+  chat.classList.add("chat", type);
+
+  const chatBubble = document.createElement("div");
+  chatBubble.classList.add("chat-bubble");
+  chatBubble.textContent = message;
+
+  if (file) {
+    if (file.type.startsWith("image/")) {
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(file);
+      chatBubble.appendChild(img);
+    } else {
+      const fileLink = document.createElement("a");
+      fileLink.href = URL.createObjectURL(file);
+      fileLink.textContent = `Download ${file.name}`;
+      fileLink.classList.add("file-link");
+      chatBubble.appendChild(fileLink);
+    }
+  }
+
+  chat.appendChild(chatBubble);
+  return chat;
+};
+
+// Function to display a typing indicator
+const showTypingIndicator = () => {
+  const chat = document.createElement("div");
+  chat.classList.add("chat", "ai");
+
+  const chatBubble = document.createElement("div");
+  chatBubble.classList.add("chat-bubble");
+  chatBubble.textContent = "..."; // Typing indicator
+
+  chat.appendChild(chatBubble);
+  chatsContainer.appendChild(chat);
+  scrollToBottom();
+};
+
+// Function to handle the Gemini API response
+const handleGeminiResponse = async (response) => {
+  try {
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(data.error.message);
+    }
+
+    const content = data.candidates[0].content.parts[0].text;
+    return content;
+  } catch (error) {
+    console.error("Gemini API Error:", error);
+    return `Error: ${error.message}`;
+  }
+};
+
+// Function to simulate typing effect
+const typeText = (element, text, callback) => {
+  let index = 0;
+  typingInterval = setInterval(() => {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      scrollToBottom();
+    } else {
+      clearInterval(typingInterval);
+      callback();
+    }
+  }, 20);
+};
+
+// Function to add AI chat to the container
+const addAiChat = async (message, file = null) => {
+  const aiChat = createChatBubble("...", "ai");
+  chatsContainer.appendChild(aiChat);
+  scrollToBottom();
+
+  let geminiResponse;
+  try {
+    controller = new AbortController();
+
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        contents: [
+          {
+            parts: [{ text: message }],
+          },
+        ],
+      }),
+      signal: controller.signal,
+    };
+
+    const response = await fetch(API_URL, requestOptions);
+    geminiResponse = await handleGeminiResponse(response);
+  } catch (error) {
+    geminiResponse = `Error: ${error.message}`;
+  }
+
+  chatsContainer.removeChild(aiChat);
+  const newAiChat = createChatBubble("", "ai");
+  chatsContainer.appendChild(newAiChat);
+  scrollToBottom();
+
+  typeText(newAiChat.querySelector(".chat-bubble"), geminiResponse, () => {});
+};
+
+// Function to add user chat to the container
+const addUserChat = (message, file = null) => {
+  const userChat = createChatBubble(message, "user", file);
+  chatsContainer.appendChild(userChat);
+  scrollToBottom();
+};
+
+// Function to handle form submission
+const handleFormSubmit = async (e) => {
+  e.preventDefault();
+  const message = promptInput.value.trim();
+  if (!message && !userData.file.name) return;
+
+  addUserChat(message, userData.file.name ? userData.file : null);
+  addAiChat(message, userData.file.name ? userData.file : null);
+
+  chatHistory.push({ type: "user", message, file: userData.file });
+  promptInput.value = "";
+  userData.message = "";
+  userData.file = {};
+  filePreview.src = "";
+  filePreview.style.display = "none"; // hide preview when cleared
+  fileUploadWrapper.classList.remove("active");
+};
+
+// Function to scroll to the bottom of the chats container
+const scrollToBottom = () => {
+  container.scrollTop = container.scrollHeight;
+};
+
+// Function to toggle theme
+const toggleTheme = () => {
+  document.body.classList.toggle("light-theme");
+};
+
+// Function to delete all chats
+const deleteChats = () => {
+  chatsContainer.innerHTML = "";
+  chatHistory.length = 0;
+};
+
+// Function to handle file selection
+const handleFileSelect = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  userData.file = file;
+  filePreview.src = URL.createObjectURL(file);
+  filePreview.style.display = "block"; // show only when a file exists
+  fileUploadWrapper.classList.add("active");
+};
+
+// Event Listeners
+promptForm.addEventListener("submit", handleFormSubmit);
+themeToggleBtn.addEventListener("click", toggleTheme);
+deleteChatsBtn.addEventListener("click", deleteChats);
+fileInput.addEventListener("change", handleFileSelect);
+cancelFileBtn.addEventListener("click", () => {
+  userData.file = {};
+  filePreview.src = "";
+  filePreview.style.display = "none";
+  fileUploadWrapper.classList.remove("active");
+  fileInput.value = ""; // Reset the file input
+});
+
+stopResponseBtn.addEventListener("click", () => {
+  if (controller) {
+    controller.abort();
+    clearInterval(typingInterval);
+  }
+});
+
+
+</script>
+
+
+
+</body>
+</html>
+
