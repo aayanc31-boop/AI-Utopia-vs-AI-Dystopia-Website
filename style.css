@@ -1,0 +1,179 @@
+:root {
+  --clr-primary: hsl(354, 77%, 53%);
+  --clr-secondary: rgb(41, 57, 226);
+  --clr-surface: hsl(0, 0%, 8%);
+  --clr-text: hsl(0, 0%, 85%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  background: var(--clr-surface);
+  color: var(--clr-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 25rem 12.5rem;
+}
+
+.container {
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+.site-header {
+  background-image: url("full pic.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* PARALLAX EFFECT */
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.site-header-mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  -webkit-mask: url("Group 1.svg") no-repeat center bottom;
+  -webkit-mask-size: cover;
+
+  mask: url("Group 1.svg") no-repeat center bottom;
+  mask-size: cover;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.site-title {
+  font-size: clamp(2rem, 8vw, 6rem);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+}
+
+/* Navbar styling */
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  z-index: 3; /* above mask */
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #ffffff; /* white text initially */
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#toggleImage {
+    width: 1030px; 
+    height: auto;
+    cursor: pointer; /* Indicate it's clickable if you want */
+}
+
+#toggleButton {
+    margin-top: 10px;
+}
+
+/* ===== Moving White Outline for Navbar Links (Hover Only) ===== */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotateOutline {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
+.navbar ul li a {
+  position: relative;
+  isolation: isolate;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.navbar ul li a::before,
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg 330deg,
+    white 340deg 360deg
+  );
+  z-index: -1;
+
+  -webkit-mask:
+    linear-gradient(#ffffff 0 0) content-box,
+    linear-gradient(#ffffff 0 0);
+  -webkit-mask-composite: xor;
+          mask:
+    linear-gradient(#ffffff 0 0) content-box,
+    linear-gradient(#ffffff 0 0);
+          mask-composite: exclude;
+
+  padding: 2px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.navbar ul li a::before {
+  filter: blur(8px);
+}
+
+.navbar ul li a:hover {
+  color: white; /* white text on hover */
+  background: black; /* black background on hover */
+}
+
+.navbar ul li a:hover::before,
+.navbar ul li a:hover::after {
+  opacity: 1;
+  animation: rotateOutline 2s linear infinite;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 75px;
+  color: #ffffff;
+}
+
